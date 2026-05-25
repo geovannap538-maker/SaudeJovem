@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seu Futuro — Saúde Sexual para Jovens</title>
+  <script src="saudeJovem.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="navigate('home')">
+      <div class="nav-logo-icon">💜</div>
+      <span class="nav-logo-text">Seu Futuro</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#" onclick="navigate('home')" data-page="home">Início</a></li>
+      <li><a href="#" onclick="navigate('gravidez')" data-page="gravidez">Gravidez</a></li>
+      <li><a href="#" onclick="navigate('ists')" data-page="ists">ISTs</a></li>
+      <li><a href="#" onclick="navigate('quiz')" data-page="quiz">Quiz</a></li>
+      <li><a href="#" onclick="navigate('ajuda')" data-page="ajuda">Ajuda</a></li>
+    </ul>
+    <button class="nav-mobile-btn" onclick="toggleMobileMenu()" id="mobileMenuBtn">☰</button>
+  </div>
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="#" onclick="navigate('home')" data-page="home">Início</a>
+    <a href="#" onclick="navigate('gravidez')" data-page="gravidez">Gravidez</a>
+    <a href="#" onclick="navigate('ists')" data-page="ists">ISTs</a>
+    <a href="#" onclick="navigate('quiz')" data-page="quiz">Quiz</a>
+    <a href="#" onclick="navigate('ajuda')" data-page="ajuda">Ajuda</a>
+  </div>
+</nav>
+
+<!-- ===================== HOME ===================== -->
+<div id="page-home" class="page active">
+
+  <!-- Hero -->
+  <section class="hero-bg">
+    <div class="container hero-content">
+      <div class="hero-grid">
+        <div class="fade-up">
+          <h1 class="hero-title">
+            <span class="line1">Seu futuro,</span><br>
+            <span class="line2">suas escolhas</span>
+          </h1>
+          <p class="hero-desc">
+            Informação clara e acolhedora sobre saúde sexual e reprodutiva.
+            Aqui você encontra tudo que precisa saber sobre gravidez na adolescência
+            e ISTs, sem julgamentos, com respeito e carinho.
+          </p>
+          <div class="hero-btns">
+            <a href="#" class="btn btn-primary btn-lg" onclick="navigate('gravidez')">
+              Saiba Mais <span>→</span>
+            </a>
+            <a href="#" class="btn btn-outline btn-lg" onclick="navigate('quiz')">
+              Faça o Quiz
+            </a>
+          </div>
+          <div class="hero-badge">
+            <div class="pulse-dot"></div>
+            <span>Informações atualizadas e confiáveis do Ministério da Saúde</span>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap fade-up stagger-2">
+          <div class="hero-image">
+            <img src="https://media.istockphoto.com/id/1278978403/pt/foto/teenager-friends-sitting-together-and-laughing.jpg?s=612x612&w=0&k=20&c=9rcsDClDF1hC2uC6SUjjnMh_3uPTiqfOQMtJnoIMHeE=" alt="Jovens diversos sorrindo">
+          </div>
+          <div class="hero-orb-1"></div>
+          <div class="hero-orb-2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section-lg">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 style="font-size:2.25rem; font-weight:800; margin-bottom:1rem;">O que você vai encontrar aqui</h2>
+        <p style="font-size:1.1rem; color:var(--gray-600); max-width:640px; margin:0 auto;">
+          Navegue pelas seções e descubra informações importantes para cuidar da sua saúde e fazer escolhas conscientes.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <a href="#" onclick="navigate('gravidez')" style="display:block;">
+          <div class="card feature-card">
+            <div class="feature-icon grad-pink-rose">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </div>
+            <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:0.5rem;">Gravidez na Adolescência</h3>
+            <p style="color:var(--gray-600);">Entenda os riscos, as mudanças e como se prevenir de forma segura.</p>
+            <div class="explore-link">Explorar <span>→</span></div>
+          </div>
+        </a>
+
+        <a href="#" onclick="navigate('ists')" style="display:block;">
+          <div class="card feature-card">
+            <div class="feature-icon grad-purple-indigo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:0.5rem;">ISTs</h3>
+            <p style="color:var(--gray-600);">Conheça as principais infecções, sintomas e formas de prevenção.</p>
+            <div class="explore-link">Explorar <span>→</span></div>
+          </div>
+        </a>
+
+        <a href="#" onclick="navigate('quiz')" style="display:block;">
+          <div class="card feature-card">
+            <div class="feature-icon grad-blue-cyan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            </div>
+            <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:0.5rem;">Teste seus Conhecimentos</h3>
+            <p style="color:var(--gray-600);">Faça nosso quiz interativo e veja o quanto você sabe sobre o tema!</p>
+            <div class="explore-link">Explorar <span>→</span></div>
+          </div>
+        </a>
+
+        <a href="#" onclick="navigate('ajuda')" style="display:block;">
+          <div class="card feature-card">
+            <div class="feature-icon grad-green-emerald">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:0.5rem;">Onde Buscar Ajuda</h3>
+            <p style="color:var(--gray-600);">Encontre profissionais de saúde prontos para te acolher e ajudar.</p>
+            <div class="explore-link">Explorar <span>→</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container text-center">
+      <h2>Precisa de ajuda agora?</h2>
+      <p>
+        Não fique com dúvidas! Profissionais de saúde estão prontos para te acolher
+        e orientar sem julgamentos.
+      </p>
+      <a href="#" class="btn btn-white btn-lg" onclick="navigate('ajuda')">
+        Encontre Ajuda Aqui <span>→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Messages -->
+  <section class="section-lg">
+    <div class="container">
+      <div class="grid-3">
+        <div class="card message-card">
+          <div class="message-emoji">💜</div>
+          <h3 style="font-weight:700; margin-bottom:0.5rem;">Sem Julgamentos</h3>
+          <p style="color:var(--gray-600);">Você merece informação clara e acolhimento, não sermões.</p>
+        </div>
+        <div class="card message-card">
+          <div class="message-emoji">🌟</div>
+          <h3 style="font-weight:700; margin-bottom:0.5rem;">Suas Escolhas</h3>
+          <p style="color:var(--gray-600);">Conhecimento é poder! Tome decisões informadas sobre sua saúde.</p>
+        </div>
+        <div class="card message-card">
+          <div class="message-emoji">🤝</div>
+          <h3 style="font-weight:700; margin-bottom:0.5rem;">Você Não Está Sozinho(a)</h3>
+          <p style="color:var(--gray-600);">Há profissionais e pessoas prontas para te apoiar sempre.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===================== GRAVIDEZ ===================== -->
+<div id="page-gravidez" class="page">
+
+  <section class="hero-bg">
+    <div class="container">
+      <div class="page-hero">
+        <div class="icon-circle grad-pink-rose" style="margin:0 auto 1.5rem;">💗</div>
+        <h1>Gravidez na Adolescência</h1>
+        <p>Informações importantes para você fazer escolhas conscientes sobre seu futuro.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- O que é -->
+  <section class="section">
+    <div class="container">
+      <div class="info-grid">
+        <div class="info-text">
+          <h2 style="font-size:2rem; font-weight:800; margin-bottom:1.5rem;">O que você precisa saber</h2>
+          <p>A gravidez na adolescência acontece quando uma pessoa entre 10 e 19 anos fica grávida. É um momento de grandes mudanças e desafios, tanto físicos quanto emocionais.</p>
+          <p><strong>Não é motivo de vergonha!</strong> Mas é importante entender que existem riscos e consequências que podem afetar seu presente e seu futuro.</p>
+          <p>A boa notícia é que você tem o poder de fazer escolhas informadas e se proteger. E se você já está grávida ou conhece alguém que está, saiba que há apoio disponível.</p>
+        </div>
+        <div class="info-image">
+          <img src="https://brstatic.guiainfantil.com/media/595/adoG.jpg" alt="Jovem confiante" onerror="this.src='https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Riscos -->
+  <section class="section-gray">
+    <div class="container">
+      <div class="text-center mb-12">
+        <div class="badge badge-amber" style="margin-bottom:1rem;">⚠️ Importante saber</div>
+        <h2 style="font-size:2.25rem; font-weight:800; margin-bottom:1rem;">Riscos e Consequências</h2>
+        <p style="color:var(--gray-600); font-size:1.1rem; max-width:600px; margin:0 auto;">Não queremos assustar você, mas é importante conhecer os desafios para tomar decisões conscientes.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card risco-card">
+          <div class="icon-box grad-pink-rose" style="width:48px;height:48px;margin-bottom:1rem;">
+            <span style="font-size:1.25rem;">💗</span>
+          </div>
+          <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:0.5rem;">Saúde Física</h3>
+          <p style="color:var(--gray-600);">Maior risco de complicações na gravidez e parto para mães adolescentes, que ainda estão em desenvolvimento.</p>
+        </div>
+        <div class="card risco-card">
+          <div class="icon-box grad-purple-indigo" style="width:48px;height:48px;margin-bottom:1rem;">
+            <span style="font-size:1.25rem;">🧠</span>
+          </div>
+          <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:0.5rem;">Saúde Emocional</h3>
+          <p style="color:var(--gray-600);">Mudanças bruscas e responsabilidades que podem afetar a saúde mental e o desenvolvimento pessoal.</p>
+        </div>
+        <div class="card risco-card">
+          <div class="icon-box grad-blue-cyan" style="width:48px;height:48px;margin-bottom:1rem;">
+            <span style="font-size:1.25rem;">👥</span>
+          </div>
+          <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:0.5rem;">Vida Social</h3>
+          <p style="color:var(--gray-600);">Possível afastamento de amigos, mudanças na rotina e nas atividades típicas da adolescência.</p>
+        </div>
+        <div class="card risco-card">
+          <div class="icon-box grad-orange-amber" style="width:48px;height:48px;margin-bottom:1rem;">
+            <span style="font-size:1.25rem;">📉</span>
+          </div>
+          <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:0.5rem;">Educação e Carreira</h3>
+          <p style="color:var(--gray-600);">Interrupção ou dificuldade nos estudos, impactando planos e oportunidades futuras.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prevenção -->
+  <section class="section-lg">
+    <div class="container">
+      <div class="text-center mb-12">
+        <div class="icon-circle grad-green-emerald" style="margin:0 auto 1.5rem;">🛡️</div>
+        <h2 style="font-size:2.25rem; font-weight:800; margin-bottom:1rem;">Como se Prevenir</h2>
+        <p style="color:var(--gray-600); font-size:1.1rem; max-width:600px; margin:0 auto;">Existem vários métodos contraceptivos seguros e eficazes. Conheça as opções!</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card prevention-card">
+          <div class="prevention-emoji">🛡️</div>
+          <h3 style="font-weight:700; margin-bottom:0.5rem;">Preservativo (Camisinha)</h3>
+          <p style="color:var(--gray-600); font-size:0.9rem;">Masculina ou feminina. Protege contra gravidez E ISTs. Disponível gratuitamente nas UBS.</p>
+        </div>
+        <div class="card prevention-card">
+          <div class="prevention-emoji">💊</div>
+          <h3 style="font-weight:700; margin-bottom:0.5rem;">Pílula Anticoncepcional</h3>
+          <p style="color:var(--gray-600); font-size:0.9rem;">Uso diário conforme prescrição médica. Importante consultar profissional de saúde.</p>
+        </div>
+        <div class="card prevention-card">
+          <div class="prevention-emoji">🔒</div>
+          <h3 style="font-weight:700; margin-bottom:0.5rem;">DIU</h3>
+          <p style="color:var(--gray-600); font-size:0.9rem;">Dispositivo intrauterino. Colocado por profissional de saúde, oferece proteção de longo prazo.</p>
+        </div>
+        <div class="card prevention-card">
+          <div class="prevention-emoji">💉</div>
+          <h3 style="font-weight:700; margin-bottom:0.5rem;">Implante Anticoncepcional</h3>
+          <p style="color:var(--gray-600); font-size:0.9rem;">Pequeno bastão inserido no braço. Duração de até 3 anos. Disponível no SUS.</p>
+        </div>
+        <div class="card prevention-card">
+          <div class="prevention-emoji">⚡</div>
+          <h3 style="font-weight:700; margin-bottom:0.5rem;">Anticoncepção de Emergência</h3>
+          <p style="color:var(--gray-600); font-size:0.9rem;">Pílula do dia seguinte. Para emergências, não deve ser método regular. Disponível nas UBS.</p>
+        </div>
+        <div class="card prevention-card">
+          <div class="prevention-emoji">👨‍⚕️</div>
+          <h3 style="font-weight:700; margin-bottom:0.5rem;">Conversa com Profissionais</h3>
+          <p style="color:var(--gray-600); font-size:0.9rem;">Consulte médicos e enfermeiros na UBS para escolher o melhor método para você.</p>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <h3 style="font-size:1.5rem; font-weight:800; margin-bottom:1rem;">💡 Dica Importante</h3>
+        <p style="color:var(--gray-700); max-width:720px; margin:0 auto; line-height:1.7;">
+          <strong>Somente a camisinha (preservativo) protege contra gravidez E ISTs ao mesmo tempo!</strong>
+          Os outros métodos previnem apenas a gravidez. Por isso, o ideal é usar a camisinha sempre, podendo combinar com outro método anticoncepcional para dupla proteção.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container text-center">
+      <h2>Lembre-se: você tem direito à informação e ao atendimento!</h2>
+      <p>Profissionais de saúde nas Unidades Básicas de Saúde (UBS) estão prontos para te orientar sobre métodos contraceptivos, sem julgamentos e com total confidencialidade.</p>
+      <a href="#" class="btn btn-white btn-lg" onclick="navigate('ajuda')">
+        Encontre uma UBS Perto de Você <span>→</span>
+      </a>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===================== ISTs ===================== -->
+<div id="page-ists" class="page">
+
+  <section class="hero-bg">
+    <div class="container">
+      <div class="page-hero">
+        <div class="icon-circle grad-purple-indigo" style="margin:0 auto 1.5rem;">🛡️</div>
+        <h1>Infecções Sexualmente Transmissíveis (ISTs)</h1>
+        <p>Conheça as principais ISTs, sintomas e como se proteger de forma segura.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- O que são -->
+  <section class="section">
+    <div class="container" style="max-width:800px;">
+      <h2 style="font-size:2rem; font-weight:800; margin-bottom:1.5rem;">O que são ISTs?</h2>
+      <p style="color:var(--gray-700); margin-bottom:1rem; line-height:1.7;">ISTs (Infecções Sexualmente Transmissíveis) são infecções causadas por vírus, bactérias ou outros micro-organismos que passam de uma pessoa para outra principalmente através de relações sexuais (oral, vaginal ou anal) sem proteção.</p>
+      <p style="color:var(--gray-700); margin-bottom:1.5rem; line-height:1.7;"><strong>Importante:</strong> Muitas ISTs podem não apresentar sintomas visíveis, mas isso não significa que não existem! Por isso a testagem regular é essencial.</p>
+      <div class="warning-box">
+        <div style="display:flex; gap:0.75rem; align-items:flex-start;">
+          <span style="font-size:1.25rem; flex-shrink:0;">⚠️</span>
+          <div>
+            <h3 style="font-weight:700; color:#92400e; margin-bottom:0.25rem;">Não tenha vergonha!</h3>
+            <p style="color:#78350f; font-size:0.95rem;">ISTs são mais comuns do que você imagina e não são motivo de vergonha. O importante é se informar, se proteger e buscar tratamento quando necessário.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lista ISTs -->
+  <section class="section-gray">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 style="font-size:2.25rem; font-weight:800; margin-bottom:1rem;">Principais ISTs</h2>
+        <p style="color:var(--gray-600); font-size:1.1rem; max-width:600px; margin:0 auto;">Conheça os sintomas e formas de prevenção de cada uma.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card ist-card">
+          <div class="ist-icon grad-red-rose">🦠</div>
+          <h3 style="font-weight:700; margin-bottom:0.75rem;">HIV/AIDS</h3>
+          <div class="mb-4"><div class="ist-label">Sintomas:</div><div class="ist-value">Pode não apresentar sintomas por anos. Quando não tratado, pode evoluir para AIDS.</div></div>
+          <div><div class="ist-label">Prevenção:</div><div class="ist-value">Uso de preservativo, testagem regular, tratamento disponível no SUS.</div></div>
+        </div>
+        <div class="card ist-card">
+          <div class="ist-icon grad-amber-orange">🔴</div>
+          <h3 style="font-weight:700; margin-bottom:0.75rem;">Sífilis</h3>
+          <div class="mb-4"><div class="ist-label">Sintomas:</div><div class="ist-value">Feridas indolores, manchas no corpo, sintomas podem desaparecer mas a infecção continua.</div></div>
+          <div><div class="ist-label">Prevenção:</div><div class="ist-value">Preservativo e testagem. Tem cura com tratamento adequado.</div></div>
+        </div>
+        <div class="card ist-card">
+          <div class="ist-icon grad-yellow-orange">💧</div>
+          <h3 style="font-weight:700; margin-bottom:0.75rem;">Gonorreia</h3>
+          <div class="mb-4"><div class="ist-label">Sintomas:</div><div class="ist-value">Corrimento, dor ao urinar, dor abdominal. Pode não ter sintomas.</div></div>
+          <div><div class="ist-label">Prevenção:</div><div class="ist-value">Preservativo. Tem cura com antibióticos.</div></div>
+        </div>
+        <div class="card ist-card">
+          <div class="ist-icon grad-indigo-blue">🔵</div>
+          <h3 style="font-weight:700; margin-bottom:0.75rem;">Clamídia</h3>
+          <div class="mb-4"><div class="ist-label">Sintomas:</div><div class="ist-value">Corrimento, dor ao urinar. Maioria não apresenta sintomas.</div></div>
+          <div><div class="ist-label">Prevenção:</div><div class="ist-value">Preservativo. Tem cura com antibióticos.</div></div>
+        </div>
+        <div class="card ist-card">
+          <div class="ist-icon grad-purple-pink">⚠️</div>
+          <h3 style="font-weight:700; margin-bottom:0.75rem;">HPV</h3>
+          <div class="mb-4"><div class="ist-label">Sintomas:</div><div class="ist-value">Verrugas genitais, pode não ter sintomas. Alguns tipos podem causar câncer.</div></div>
+          <div><div class="ist-label">Prevenção:</div><div class="ist-value">Preservativo e vacina (disponível no SUS para jovens).</div></div>
+        </div>
+        <div class="card ist-card">
+          <div class="ist-icon grad-pink-rose2">🔺</div>
+          <h3 style="font-weight:700; margin-bottom:0.75rem;">Herpes Genital</h3>
+          <div class="mb-4"><div class="ist-label">Sintomas:</div><div class="ist-value">Bolhas e feridas dolorosas na região genital, coceira, ardência.</div></div>
+          <div><div class="ist-label">Prevenção:</div><div class="ist-value">Preservativo. Não tem cura, mas tem tratamento para controlar.</div></div>
+        </div>
+        <div class="card ist-card">
+          <div class="ist-icon grad-amber-yellow">🟡</div>
+          <h3 style="font-weight:700; margin-bottom:0.75rem;">Hepatite B e C</h3>
+          <div class="mb-4"><div class="ist-label">Sintomas:</div><div class="ist-value">Cansaço, náusea, pele amarelada. Pode não ter sintomas.</div></div>
+          <div><div class="ist-label">Prevenção:</div><div class="ist-value">Preservativo, vacina para Hepatite B (disponível no SUS).</div></div>
+        </div>
+        <div class="card ist-card">
+          <div class="ist-icon grad-green-emerald">💚</div>
+          <h3 style="font-weight:700; margin-bottom:0.75rem;">Tricomoníase</h3>
+          <div class="mb-4"><div class="ist-label">Sintomas:</div><div class="ist-value">Corrimento com odor, coceira, dor ao urinar.</div></div>
+          <div><div class="ist-label">Prevenção:</div><div class="ist-value">Preservativo. Tem cura com medicamento.</div></div>
+        </div>
+        <div class="card ist-card">
+          <div class="ist-icon grad-cyan-teal">🔬</div>
+          <h3 style="font-weight:700; margin-bottom:0.75rem;">HTLV</h3>
+          <div class="mb-4"><div class="ist-label">Sintomas:</div><div class="ist-value">Maioria não apresenta sintomas. Pode causar problemas neurológicos.</div></div>
+          <div><div class="ist-label">Prevenção:</div><div class="ist-value">Preservativo e testagem. Não tem cura, mas acompanhamento médico é fundamental.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prevenção -->
+  <section class="section-lg">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 style="font-size:2.25rem; font-weight:800; margin-bottom:1rem;">Como se Proteger</h2>
+        <p style="color:var(--gray-600); font-size:1.1rem; max-width:600px; margin:0 auto;">Dicas essenciais para manter sua saúde sexual em dia.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card prev-tip-card">
+          <div class="icon-box grad-purple-indigo" style="width:48px;height:48px;margin-bottom:1rem;"><span style="font-size:1.25rem;">🛡️</span></div>
+          <h3 style="font-weight:700; margin-bottom:0.5rem;">Use Preservativo Sempre</h3>
+          <p style="color:var(--gray-600);">Camisinha masculina ou feminina em todas as relações sexuais. Disponível grátis nas UBS.</p>
+        </div>
+        <div class="card prev-tip-card">
+          <div class="icon-box grad-blue-cyan" style="width:48px;height:48px;margin-bottom:1rem;"><span style="font-size:1.25rem;">🩺</span></div>
+          <h3 style="font-weight:700; margin-bottom:0.5rem;">Faça Testagem Regular</h3>
+          <p style="color:var(--gray-600);">Testes gratuitos nas UBS. Quanto mais cedo descobrir, melhor o tratamento.</p>
+        </div>
+        <div class="card prev-tip-card">
+          <div class="icon-box grad-pink-rose" style="width:48px;height:48px;margin-bottom:1rem;"><span style="font-size:1.25rem;">💉</span></div>
+          <h3 style="font-weight:700; margin-bottom:0.5rem;">Vacine-se</h3>
+          <p style="color:var(--gray-600);">Vacinas contra HPV e Hepatite B disponíveis gratuitamente no SUS para jovens.</p>
+        </div>
+        <div class="card prev-tip-card">
+          <div class="icon-box grad-green-emerald" style="width:48px;height:48px;margin-bottom:1rem;"><span style="font-size:1.25rem;">✅</span></div>
+          <h3 style="font-weight:700; margin-bottom:0.5rem;">Converse com seu Parceiro(a)</h3>
+          <p style="color:var(--gray-600);">Fale abertamente sobre proteção e cuidados. Saúde sexual é responsabilidade de todos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container text-center">
+      <h2>Sua saúde sexual é prioridade!</h2>
+      <p>Faça testagens regulares, use preservativos e busque orientação nas UBS sem vergonha. Informação é o melhor remédio.</p>
+      <a href="#" class="btn btn-white btn-lg" onclick="navigate('ajuda')">
+        Encontre um Serviço de Saúde <span>→</span>
+      </a>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===================== QUIZ ===================== -->
+<div id="page-quiz" class="page">
+
+  <!-- Tela Inicial do Quiz -->
+  <div id="quiz-start" class="quiz-start">
+    <div class="card quiz-start-card">
+      <div class="icon-circle grad-blue-cyan" style="margin:0 auto 1.5rem; font-size:2rem;">🧠</div>
+      <h1 style="font-size:2.25rem; font-weight:800; margin-bottom:1rem;">Teste seus Conhecimentos</h1>
+      <p style="color:var(--gray-600); margin-bottom:2rem; font-size:1.1rem;">
+        Descubra o quanto você sabe sobre saúde sexual e reprodutiva!
+        São 8 perguntas sobre gravidez na adolescência, ISTs e como se proteger.
+      </p>
+      <div class="grid-3" style="margin-bottom:2rem;">
+        <div style="text-align:center; padding:1rem; background:var(--gray-50); border-radius:0.75rem;">
+          <div style="font-size:1.5rem; font-weight:800; color:var(--purple);">8</div>
+          <div style="font-size:0.85rem; color:var(--gray-600);">Perguntas</div>
+        </div>
+        <div style="text-align:center; padding:1rem; background:var(--gray-50); border-radius:0.75rem;">
+          <div style="font-size:1.5rem; font-weight:800; color:var(--pink);">~5min</div>
+          <div style="font-size:0.85rem; color:var(--gray-600);">Duração</div>
+        </div>
+        <div style="text-align:center; padding:1rem; background:var(--gray-50); border-radius:0.75rem;">
+          <div style="font-size:1.5rem; font-weight:800; color:var(--green);">💡</div>
+          <div style="font-size:0.85rem; color:var(--gray-600);">Com explicações</div>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-lg" style="width:100%; justify-content:center;" onclick="startQuiz()">
+        Começar Quiz <span>→</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Tela do Quiz -->
+  <div id="quiz-screen" class="quiz-screen">
+    <div class="quiz-inner">
+      <div class="progress-bar-wrap">
+        <div class="progress-labels">
+          <span id="q-counter">Questão 1 de 8</span>
+          <span id="q-score">Pontuação: 0/0</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+        </div>
+      </div>
+
+      <div class="card question-card">
+        <div class="question-header">
+          <div class="question-num" id="q-num">1</div>
+          <div class="question-text" id="q-text"></div>
+        </div>
+        <div id="answers-container"></div>
+      </div>
+
+      <div id="explanation-container" style="display:none;">
+        <div class="card explanation-card">
+          <div class="explanation-inner">
+            <span class="icon">💡</span>
+            <div>
+              <h4>Explicação:</h4>
+              <p id="explanation-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="next-btn-wrap">
+          <button class="btn btn-primary btn-lg" style="width:100%; justify-content:center;" onclick="nextQuestion()" id="next-btn">
+            Próxima Questão <span>→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resultado -->
+  <div id="quiz-result" class="quiz-result">
+    <div class="card result-card">
+      <div id="result-icon" class="icon-circle" style="margin:0 auto 1.5rem; font-size:2rem;"></div>
+      <h2 id="result-title" style="font-size:2rem; font-weight:800; margin-bottom:1rem;"></h2>
+      <div class="result-score" id="result-score"></div>
+      <p style="color:var(--gray-600); font-size:1.1rem; margin-bottom:1.5rem;" id="result-percent"></p>
+      <div class="result-message-box">
+        <p style="color:var(--gray-700);" id="result-message"></p>
+      </div>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
+        <button class="btn btn-primary btn-lg" onclick="startQuiz()">
+          🔄 Refazer Quiz
+        </button>
+        <button class="btn btn-outline btn-lg" onclick="navigate('home')">
+          Voltar ao Início
+        </button>
+      </div>
+      <div style="border-top:1px solid var(--gray-200); padding-top:1.5rem;">
+        <h3 style="font-weight:700; margin-bottom:1rem;">Continue aprendendo:</h3>
+        <div class="result-links">
+          <button class="result-tag" style="background:#fce7f3; color:#9d174d;" onclick="navigate('gravidez')">Gravidez na Adolescência</button>
+          <button class="result-tag" style="background:#ede9fe; color:#5b21b6;" onclick="navigate('ists')">ISTs</button>
+          <button class="result-tag" style="background:#dbeafe; color:#1e40af;" onclick="navigate('ajuda')">Onde Buscar Ajuda</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===================== AJUDA ===================== -->
+<div id="page-ajuda" class="page">
+
+  <section class="hero-bg">
+    <div class="container">
+      <div class="page-hero">
+        <div class="icon-circle" style="margin:0 auto 1.5rem; background:linear-gradient(135deg,var(--blue),var(--purple)); font-size:1.5rem;">💜</div>
+        <h1>Onde Buscar Ajuda</h1>
+        <p>Você não está sozinho(a)! Há profissionais e serviços prontos para te acolher, orientar e cuidar da sua saúde com respeito e sem julgamentos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section class="section-lg">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 style="font-size:2.25rem; font-weight:800; margin-bottom:1rem;">Serviços de Saúde Disponíveis</h2>
+        <p style="color:var(--gray-600); font-size:1.1rem; max-width:600px; margin:0 auto;">Conheça os principais locais onde você pode buscar atendimento gratuito.</p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:1.5rem;">
+
+        <div class="card recurso-card">
+          <div class="recurso-inner">
+            <div class="icon-box grad-purple-indigo" style="width:64px;height:64px;"><span style="font-size:1.75rem;">📍</span></div>
+            <div class="recurso-content">
+              <h3>Unidades Básicas de Saúde (UBS)</h3>
+              <p>As UBS são a porta de entrada do SUS. Lá você encontra consultas, exames, preservativos gratuitos e orientações sobre saúde sexual.</p>
+              <div class="recurso-items">
+                <h4>O que você encontra:</h4>
+                <ul class="recurso-list">
+                  <li><span class="check-green">✓</span> Consultas com médicos e enfermeiros</li>
+                  <li><span class="check-green">✓</span> Testes gratuitos para ISTs</li>
+                  <li><span class="check-green">✓</span> Orientação sobre métodos contraceptivos</li>
+                  <li><span class="check-green">✓</span> Distribuição gratuita de preservativos</li>
+                  <li><span class="check-green">✓</span> Vacinas (HPV, Hepatite B)</li>
+                  <li><span class="check-green">✓</span> Pré-natal para gestantes adolescentes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card recurso-card">
+          <div class="recurso-inner">
+            <div class="icon-box grad-blue-cyan" style="width:64px;height:64px;"><span style="font-size:1.75rem;">📞</span></div>
+            <div class="recurso-content">
+              <h3>Disque Saúde 136</h3>
+              <p>Serviço telefônico gratuito do Ministério da Saúde, disponível 24 horas por dia, todos os dias da semana.</p>
+              <div class="recurso-items">
+                <h4>O que você encontra:</h4>
+                <ul class="recurso-list">
+                  <li><span class="check-green">✓</span> Atendimento gratuito 24h/7 dias</li>
+                  <li><span class="check-green">✓</span> Orientações sobre saúde sexual</li>
+                  <li><span class="check-green">✓</span> Informações sobre UBS próximas</li>
+                  <li><span class="check-green">✓</span> Esclarecimento de dúvidas</li>
+                  <li><span class="check-green">✓</span> Sigiloso e confidencial</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card recurso-card">
+          <div class="recurso-inner">
+            <div class="icon-box grad-green-emerald" style="width:64px;height:64px;"><span style="font-size:1.75rem;">👥</span></div>
+            <div class="recurso-content">
+              <h3>Centros de Testagem e Aconselhamento (CTA)</h3>
+              <p>Locais especializados em testagem e aconselhamento sobre ISTs, especialmente HIV/AIDS.</p>
+              <div class="recurso-items">
+                <h4>O que você encontra:</h4>
+                <ul class="recurso-list">
+                  <li><span class="check-green">✓</span> Testes rápidos e gratuitos</li>
+                  <li><span class="check-green">✓</span> Aconselhamento especializado</li>
+                  <li><span class="check-green">✓</span> Resultados no mesmo dia</li>
+                  <li><span class="check-green">✓</span> Atendimento confidencial</li>
+                  <li><span class="check-green">✓</span> Encaminhamento para tratamento</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Dicas -->
+  <section class="section-gray">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 style="font-size:2.25rem; font-weight:800; margin-bottom:1rem;">Lembrete Importante</h2>
+        <p style="color:var(--gray-600); font-size:1.1rem; max-width:600px; margin:0 auto;">Você merece ser atendido(a) com respeito e carinho.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card dica-card">
+          <div class="dica-emoji">🤝</div>
+          <h3 style="font-weight:700; margin-bottom:0.5rem;">Converse com um Adulto de Confiança</h3>
+          <p style="color:var(--gray-600);">Pais, responsáveis, professores ou outros adultos que você confia podem te apoiar e orientar.</p>
+        </div>
+        <div class="card dica-card">
+          <div class="dica-emoji">👨‍⚕️</div>
+          <h3 style="font-weight:700; margin-bottom:0.5rem;">Profissionais de Saúde Estão Prontos</h3>
+          <p style="color:var(--gray-600);">Médicos, enfermeiros e psicólogos são treinados para atender adolescentes com respeito e sigilo.</p>
+        </div>
+        <div class="card dica-card">
+          <div class="dica-emoji">🔒</div>
+          <h3 style="font-weight:700; margin-bottom:0.5rem;">Seu Atendimento é Confidencial</h3>
+          <p style="color:var(--gray-600);">Os profissionais de saúde mantêm sigilo sobre suas consultas e tratamentos, respeitando sua privacidade.</p>
+        </div>
+        <div class="card dica-card">
+          <div class="dica-emoji">💜</div>
+          <h3 style="font-weight:700; margin-bottom:0.5rem;">Não Tenha Vergonha de Buscar Ajuda</h3>
+          <p style="color:var(--gray-600);">Cuidar da sua saúde sexual é responsabilidade e demonstra maturidade. Você merece apoio!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container text-center">
+      <h2>Não espere para cuidar da sua saúde!</h2>
+      <p>A prevenção é sempre o melhor caminho. Procure uma UBS perto de você hoje mesmo.</p>
+      <a href="tel:136" class="btn btn-white btn-lg">
+        📞 Ligue 136 — Disque Saúde (gratuito)
+      </a>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER (shared) -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-icon">💜</div>
+          <span style="font-size:1.2rem; font-weight:700; font-family:'Poppins',sans-serif;">Seu Futuro</span>
+        </div>
+        <p style="opacity:0.85; font-size:0.9rem; line-height:1.6;">Informação e acolhimento para jovens sobre saúde sexual e reprodutiva. Seu futuro começa com escolhas conscientes.</p>
+      </div>
+
+      <div>
+        <h3 style="font-weight:700; margin-bottom:1rem;">Links Rápidos</h3>
+        <ul class="footer-links">
+          <li><a href="#" onclick="navigate('gravidez')">Gravidez na Adolescência</a></li>
+          <li><a href="#" onclick="navigate('ists')">ISTs</a></li>
+          <li><a href="#" onclick="navigate('quiz')">Teste seus Conhecimentos</a></li>
+          <li><a href="#" onclick="navigate('ajuda')">Onde Buscar Ajuda</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 style="font-weight:700; margin-bottom:1rem;">Entre em Contato</h3>
+        <ul class="footer-contact" style="list-style:none;">
+          <li>📞 <span>136 - Disque Saúde (24h)</span></li>
+          <li>📍 <span>Procure a Unidade Básica de Saúde (UBS) mais próxima</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Seu Futuro. Projeto de conscientização sobre saúde sexual para jovens.</p>
+      <p style="margin-top:0.5rem;">Este site foi desenvolvido para fins educativos e informativos.</p>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
